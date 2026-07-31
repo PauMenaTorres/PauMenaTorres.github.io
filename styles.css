@@ -205,6 +205,46 @@ section h2 {
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
+/* ===== BADGES EN PORTADAS DE PROYECTOS ===== */
+.tech-badge {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    z-index: 3;
+    background: rgba(26, 26, 46, 0.9);
+    border: 1.5px solid var(--neon-color);
+    color: #f4f4f9;
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-size: 0.55rem;
+    font-family: 'Press Start 2P', cursive;
+    backdrop-filter: blur(4px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5), 0 0 8px rgba(155, 89, 182, 0.4);
+    pointer-events: none;
+    letter-spacing: 0.5px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover .tech-badge {
+    box-shadow: 0 0 12px rgba(155, 89, 182, 0.7);
+}
+
+.featured-badge {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    z-index: 3;
+    background: #00bcd4;
+    color: #ffffff;
+    padding: 8px 16px;
+    border-radius: 30px;
+    font-size: 0.55rem;
+    font-family: 'Press Start 2P', cursive;
+    box-shadow: 0 0 12px rgba(0, 229, 255, 0.8);
+    pointer-events: none;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
 /* ===== MODAL DE DETALLES DE PROYECTO ===== */
 .project-details-container {
     position: fixed;
@@ -909,7 +949,19 @@ h2 span {
         font-size: 1.4rem;
     }
     
-    .skills-list p {
-        font-size: 1rem;
+    .tech-badge,
+    .featured-badge {
+        font-size: 0.45rem;
+        padding: 3px 6px;
+    }
+    .tech-badge {
+        bottom: 6px;
+        right: 6px;
+        top: auto;
+    }
+    .featured-badge {
+        top: 10px;
+        right: 10px;
+        left: auto;
     }
 }
