@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="https://github.com/user-attachments/assets/c157b95c-6fd4-4b78-9ece-7e2e0344428f">
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <script src="i18n.js"></script>
 </head>
 
 <body>
@@ -16,25 +17,30 @@
   <nav class="navbar">
     <button class="menu-toggle" id="menu-toggle">&#9776;</button>
     <ul id="navbar-menu">
-      <li><a href="#about-section">About Me</a></li>
-      <li><a href="#education-section">Education</a></li>
-      <li><a href="#skills-section">Skills</a></li>
-      <li><a href="#projects-section">Projects</a></li>
-      <li><a href="#contact-section">Contact</a></li>
+      <li><a href="#about-section" data-i18n="nav_about">About Me</a></li>
+      <li><a href="#education-section" data-i18n="nav_education">Education</a></li>
+      <li><a href="#skills-section" data-i18n="nav_skills">Skills</a></li>
+      <li><a href="#projects-section" data-i18n="nav_projects">Projects</a></li>
+      <li><a href="#contact-section" data-i18n="nav_contact">Contact</a></li>
     </ul>
+    <div class="lang-selector">
+      <button class="lang-btn active" data-lang="en">EN</button>
+      <button class="lang-btn" data-lang="es">ES</button>
+      <button class="lang-btn" data-lang="ca">CAT</button>
+    </div>
   </nav>
 
   <header>
     <h1><span>👋🏻</span> Hi, I'm Pau Mena Torres <span>👋🏻</span></h1>
-    <p>Game Software Engineer passionate about creating tools and games!</p>
+    <p data-i18n="header_subtitle">Game Software Engineer passionate about creating tools and games!</p>
   </header>
   <main>
     <section id="about-section" class="section about">
-      <h2>About Me</h2>
+      <h2 data-i18n="about_title">About Me</h2>
       <div class="profile">
         <img src="https://github.com/PauMenaTorres/Porfolio/blob/main/profile.png?raw=true" alt="Pau Mena Torres"
           class="profile-img">
-        <p>
+        <p data-i18n="about_bio">
           I'm a graduated Game Software Engineer holding a Bachelor's Degree in Video Game Design and Development (CITM - UPC). Experience in C++, Unity, Unreal Engine, Godot, Python, C# and custom engines. Passionate about software architecture, tool creation, and game development, with strong skills in programming, problem-solving and 3D modeling. Eager to contribute to creative projects and continue growing in the game development industry.
         </p>
       </div>
@@ -42,15 +48,15 @@
 
     <!-- Education Section -->
     <section id="education-section" class="section education">
-      <h2><span>🎓</span> Education <span>🎓</span></h2>
+      <h2><span>🎓</span> <span data-i18n="edu_title">Education</span> <span>🎓</span></h2>
       <div class="education-container">
         <div class="education-card">
           <div class="education-header">
-            <h3>Bachelor's Degree in Video Game Design & Development</h3>
-            <span class="education-badge">Graduated</span>
+            <h3 data-i18n="edu_degree">Bachelor's Degree in Video Game Design & Development</h3>
+            <span class="education-badge" data-i18n="edu_badge">Graduated</span>
           </div>
           <h4>CITM - Universitat Politècnica de Catalunya (UPC)</h4>
-          <p class="education-details">
+          <p class="education-details" data-i18n="edu_details">
             Specialized in Game Software Engineering, Engine & Graphics Programming, C++, Unity, VR Development, and UI Architecture. 
             Developed an Open-Source Cross-Platform UI Framework for Unity as Bachelor's Thesis (TFG).
           </p>
@@ -60,25 +66,25 @@
 
     <!-- Skills Section -->
     <section id="skills-section" class="section skills">
-      <h2><span>💻</span> Skills <span>💻</span></h2>
+      <h2><span>💻</span> <span data-i18n="skills_title">Skills</span> <span>💻</span></h2>
 
       <div class="skills-list">
-        <h3>Programming Languages:</h3>
+        <h3 data-i18n="skills_lang">Programming Languages:</h3>
         <p>C# | C++ | Python | C | Lua</p>
 
-        <h3>3D Modeling Software:</h3>
+        <h3 data-i18n="skills_3d">3D Modeling Software:</h3>
         <p>Maya | ZBrush | Substance</p>
 
-        <h3>Game Development Engines:</h3>
+        <h3 data-i18n="skills_engines">Game Development Engines:</h3>
         <p>Unity | Unreal | Godot | Own Engines</p>
       </div>
     </section>
 
     <!-- Projects Section -->
     <section id="projects-section" class="section projects">
-      <h2><span>🎮</span> Projects <span>🎮</span></h2>
+      <h2><span>🎮</span> <span data-i18n="projects_title">Projects</span> <span>🎮</span></h2>
 
-      <h3 class="subsection-title">Company Projects</h3>
+      <h3 class="subsection-title" data-i18n="projects_company">Company Projects</h3>
       <div class="projects-list">
         <div class="project-card" data-project="revelant-terrassa"
           style="background-image: url('./images/projects/revelant-terrassa/thumbnail.png');">
@@ -101,20 +107,21 @@
         </div>
       </div>
 
-      <h3 class="subsection-title">Personal && Group Projects</h3>
+      <h3 class="subsection-title" data-i18n="projects_personal">Personal && Group Projects</h3>
 
       <!-- Featured Main Project -->
-      <h4 class="subsection-title featured-title" style="font-size: 1.4rem; margin-top: 3.5rem; margin-bottom: 2rem;">
+      <h4 class="subsection-title featured-title" style="font-size: 1.4rem; margin-top: 3.5rem; margin-bottom: 2rem;"
+        data-i18n="projects_featured">
         Featured Project</h4>
       <div class="projects-list featured-projects-list">
         <div class="project-card featured-card" data-project="modular-ui"
           style="background-image: url('./images/projects/modular-ui/LogoConNombre.png');">
-          <div class="featured-badge">🚀 Published on Unity Asset Store</div>
+          <div class="featured-badge" data-i18n="modular_badge">🚀 Published on Unity Asset Store</div>
           <div class="tech-badge">Unity / C#</div>
           <div class="project-title-container featured-title-container">
             <h3>Modular UI</h3>
-            <p class="featured-subtitle">Cross-Platform UI Architecture Framework (Open-Source)</p>
-            <span class="view-details-btn">View Case Study & Overview →</span>
+            <p class="featured-subtitle" data-i18n="modular_subtitle">Cross-Platform UI Architecture Framework (Open-Source)</p>
+            <span class="view-details-btn" data-i18n="modular_btn">View Case Study & Overview →</span>
           </div>
         </div>
       </div>
@@ -177,22 +184,6 @@
       </div>
 
 
-      <!-- <div class="project-card" data-project="rockstallica" style="background-image: url('./images/projects/rockstallica/thumbnail.jpg');">
-      <div class="project-title-container">
-        <h3>Rockstallica Engine</h3>
-      </div>
-    </div>
-    
-    <div class="project-card" data-project="pinball" style="background-image: url('./images/projects/pinball/thumbnail.jpg');">
-      <div class="project-title-container">
-        <h3>Pinball 2D</h3>
-      </div>
-    </div>
-    
-    <div class="project-card" data-project="escaperoom" style="background-image: url('./images/projects/escaperoom/thumbnail.jpg');">
-      <div class="project-title-container">
-        <h3>EscapeRoom VR</h3>
-    </div> -->
       </div>
 
       <!-- Individual Project Details Sections (Hidden by Default) -->
@@ -205,8 +196,8 @@
           <div class="project-content">
             <div class="project-media">
               <div class="media-tabs">
-                <button class="media-tab active highlight" data-target="modular-ui-trailer">🎬 Trailer Video</button>
-                <button class="media-tab" data-target="modular-ui-screenshots">🖼️ Screenshots</button>
+                <button class="media-tab active highlight" data-target="modular-ui-trailer" data-i18n="tab_trailer">🎬 Trailer Video</button>
+                <button class="media-tab" data-target="modular-ui-screenshots" data-i18n="tab_screenshots">🖼️ Screenshots</button>
               </div>
 
               <div id="modular-ui-trailer" class="media-content active">
@@ -235,64 +226,64 @@
 
             <div class="project-info">
               <div class="info-section">
-                <h3>Status & Availability</h3>
-                <p><strong>Live & Published on Unity Asset Store (Open-Source) 🎉🚀</strong></p>
+                <h3 data-i18n="label_status">Status & Availability</h3>
+                <p><strong data-i18n="modular_status">Live & Published on Unity Asset Store (Open-Source) 🎉🚀</strong></p>
               </div>
 
               <div class="info-section">
-                <h3>Overview</h3>
-                <p>A production-ready, highly modular cross-platform UI architecture framework developed for Unity.
-                  Originally conceived as a <strong>Bachelor’s Thesis (TFG)</strong>, it has evolved into a professional
+                <h3 data-i18n="label_overview">Overview</h3>
+                <p data-i18n="modular_overview">A production-ready, highly modular cross-platform UI architecture framework developed for Unity.
+                  Originally conceived as a Bachelor’s Thesis (TFG), it has evolved into a professional
                   open-source tool for the game development community. Its core mission is to eliminate repetitive UI
                   setup by delivering a fully decoupled, scalable, and adaptable interface architecture.</p>
               </div>
 
               <div class="info-section">
-                <h3>Problem Solved</h3>
-                <p>Instead of wasting valuable time reinventing the wheel and building UI architecture from scratch for
-                  every project, <strong>Modular UI</strong> allows developers to deploy clean, decoupled, and scalable
+                <h3 data-i18n="label_problem">Problem Solved</h3>
+                <p data-i18n="modular_problem">Instead of wasting valuable time reinventing the wheel and building UI architecture from scratch for
+                  every project, Modular UI allows developers to deploy clean, decoupled, and scalable
                   UI systems in seconds, seamlessly integrated into any Unity codebase.</p>
               </div>
 
               <div class="info-section">
-                <h3>Key Features & Technical Architecture</h3>
+                <h3 data-i18n="label_features">Key Features & Technical Architecture</h3>
                 <ul>
-                  <li><strong>Clean Architectural Foundation 🧱:</strong> Built from the ground up following
+                  <li data-i18n="modular_feature_1"><strong>Clean Architectural Foundation 🧱:</strong> Built from the ground up following
                     <strong>SOLID principles</strong>. It heavily relies on the <strong>Observer pattern</strong> for
                     decoupled, event-driven communication and utilizes <strong>Factory patterns</strong> to handle
                     dynamic, independent component creation cleanly.
                   </li>
-                  <li><strong>Instant Production-Ready Templates 📦:</strong> Deploy fully functional Main Menus, HUDs,
+                  <li data-i18n="modular_feature_2"><strong>Instant Production-Ready Templates 📦:</strong> Deploy fully functional Main Menus, HUDs,
                     Pause Menus, Dialogue Systems, and Inventories straight out of the box.</li>
-                  <li><strong>Cross-Platform Adaptation 📱💻🕶️:</strong> Responsive layouts, scaling, and input schemes
+                  <li data-i18n="modular_feature_3"><strong>Cross-Platform Adaptation 📱💻🕶️:</strong> Responsive layouts, scaling, and input schemes
                     that automatically and dynamically adapt across <strong>Desktop, Mobile, and Virtual Reality
                       (VR)</strong>.</li>
-                  <li><strong>Real-Time Visual Customization 🎨:</strong> Switch your game’s entire aesthetic instantly
+                  <li data-i18n="modular_feature_4"><strong>Real-Time Visual Customization 🎨:</strong> Switch your game’s entire aesthetic instantly
                     using a powerful <strong>ScriptableObject-driven styling system</strong>; zero code modifications
                     required.</li>
-                  <li><strong>Advanced Integrated Systems ⛓️:</strong> Includes pre-integrated, robust sub-systems like
+                  <li data-i18n="modular_feature_5"><strong>Advanced Integrated Systems ⛓️:</strong> Includes pre-integrated, robust sub-systems like
                     <strong>drag-and-drop inventories</strong> and <strong>node-based dialogue trees</strong>.
                   </li>
                 </ul>
               </div>
 
               <div class="info-section">
-                <h3>Target Audience</h3>
-                <p>Whether you are a solo indie developer looking to speed up prototyping, a UI/UX designer wanting to
+                <h3 data-i18n="label_audience">Target Audience</h3>
+                <p data-i18n="modular_audience">Whether you are a solo indie developer looking to speed up prototyping, a UI/UX designer wanting to
                   test layouts instantly, or a programming team in need of a clean, architecture-driven UI foundation,
                   this tool is built to fit your workflow.</p>
               </div>
 
               <div class="info-section">
-                <h3>Technologies Used</h3>
+                <h3 data-i18n="label_tech">Technologies Used</h3>
                 <p>Unity, C#, SOLID Architecture, Observer & Factory Patterns, ScriptableObjects, Cross-Platform
                   (Desktop, Mobile, VR)</p>
               </div>
 
               <div class="info-section">
-                <h3>Links & Download</h3>
+                <h3 data-i18n="label_links">Links & Download</h3>
                 <a href="https://assetstore.unity.com/packages/tools/gui/modularui-384958" target="_blank"
-                  class="project-link">👉 Get it on Unity Asset
+                  class="project-link" data-i18n="modular_btn">👉 Get it on Unity Asset
                   Store</a>
               </div>
             </div>
@@ -307,8 +298,7 @@
           <div class="project-content">
             <div class="project-media">
               <div class="media-tabs">
-                <button class="media-tab active" data-target="warhammer-screenshots">Gameplay</button>
-                <!-- <button class="media-tab" data-target="warhammer-videos">Trailer</button> -->
+                <button class="media-tab active" data-target="warhammer-screenshots" data-i18n="tab_gameplay">Gameplay</button>
               </div>
 
               <div id="warhammer-screenshots" class="media-content active">
@@ -319,126 +309,44 @@
                   <img src="./images/projects/warhammer/video3.gif" alt="Warhammer Screenshot 3">
                 </div>
               </div>
-
-              <!-- <div id="warhammer-videos" class="media-content">
-            <div class="video-container">
-              <video controls>
-                <source src="#" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
-            </div>
-          </div> -->
             </div>
 
             <div class="project-info">
               <div class="info-section">
-                <h3>Description</h3>
-                <p>HUD and UI gameplay programmer for a Warhammer 40K diablo-like game developed with a team of 40
+                <h3 data-i18n="label_description">Description</h3>
+                <p data-i18n="w40k_desc">HUD and UI gameplay programmer for a Warhammer 40K diablo-like game developed with a team of 40
                   people.</p>
               </div>
 
               <div class="info-section">
-                <h3>My Role</h3>
+                <h3 data-i18n="label_my_role">My Role</h3>
                 <ul>
-                  <li>Designed and implemented the in-game HUD, including cooldown animations, health, ammo display, and
+                  <li data-i18n="w40k_role_1">Designed and implemented the in-game HUD, including cooldown animations, health, ammo display, and
                     action feedback.</li>
-                  <li>Added visual effects like vignette when damaged, enemy alert indicators, and health bars for
+                  <li data-i18n="w40k_role_2">Added visual effects like vignette when damaged, enemy alert indicators, and health bars for
                     bosses.</li>
-                  <li>Developed the ability management system and Coliseum door logic with animations.</li>
-                  <li>Implemented the fervor mechanic with visual feedback and temporary boosts to attack and reload
+                  <li data-i18n="w40k_role_3">Developed the ability management system and Coliseum door logic with animations.</li>
+                  <li data-i18n="w40k_role_4">Implemented the fervor mechanic with visual feedback and temporary boosts to attack and reload
                     speed.</li>
-                  <li>Built the first fully functional UI system for the engine, with images, text, sliders, anchors,
+                  <li data-i18n="w40k_role_5">Built the first fully functional UI system for the engine, with images, text, sliders, anchors,
                     and sorting layers.</li>
-                  <li>Optimized UI performance for a smooth gameplay experience.</li>
+                  <li data-i18n="w40k_role_6">Optimized UI performance for a smooth gameplay experience.</li>
                 </ul>
               </div>
 
               <div class="info-section">
-                <h3>Technologies Used</h3>
+                <h3 data-i18n="label_tech">Technologies Used</h3>
                 <p>Coffee Engine, Lua, C++</p>
               </div>
 
               <div class="info-section">
-                <h3>Links</h3>
+                <h3 data-i18n="label_links">Links</h3>
                 <a href="https://github.com/Burned-Games/W40K-TLM/tree/Gold" target="_blank" class="project-link">GitHub
                   Repository</a>
               </div>
             </div>
           </div>
         </div>
-
-        <!-- <div id="bill-tuerto" class="project-details">
-      <button class="close-project">✖</button>
-      <h2>The Rituals of Bill El Tuerto</h2>
-      
-      <div class="project-content">
-        <div class="project-media">
-          <div class="media-tabs">
-            <button class="media-tab active" data-target="bill-screenshots">Gameplay</button>
-            <button class="media-tab" data-target="bill-videos">Trailer</button>
-          </div>
-          
-          <div id="bill-screenshots" class="media-content active">
-            <div class="screenshot-gallery">
-              <img src="./images/projects/bill-tuerto/screenshot1.jpg" alt="Bill El Tuerto Screenshot 1">
-              <img src="./images/projects/bill-tuerto/screenshot2.jpg" alt="Bill El Tuerto Screenshot 2">
-              <img src="./images/projects/bill-tuerto/screenshot3.jpg" alt="Bill El Tuerto Screenshot 3">
-              <img src="./images/projects/bill-tuerto/screenshot4.jpg" alt="Bill El Tuerto Screenshot 4">
-            </div>
-          </div>
-          
-          <div id="bill-videos" class="media-content">
-            <div class="video-container">
-              <video controls>
-                <source src="./images/projects/bill-tuerto/trailer.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
-            </div>
-          </div>
-        </div>
-        
-        <div class="project-info">
-          <div class="info-section">
-            <h3>Description</h3>
-            <p>A thrilling escape room VR experience where players must uncover the dark rituals of Bill "El Tuerto" in an immersive virtual environment. This project combines puzzle-solving with atmospheric horror elements in a fully interactive VR setting.</p>
-          </div>
-          
-          <div class="info-section">
-            <h3>My Role</h3>
-            <ul>
-              <li>Implemented VR interaction system for object manipulation</li>
-              <li>Developed puzzle mechanics and progression system</li>
-              <li>Created environmental storytelling elements</li>
-              <li>Optimized performance for smooth VR experience</li>
-              <li>Integrated audio and visual effects for immersive atmosphere</li>
-              <li>Collaborated on level design and user experience</li>
-            </ul>
-          </div>
-          
-          <div class="info-section">
-            <h3>Technologies Used</h3>
-            <p>Unity, C#, SteamVR, Oculus SDK, Blender, FMOD</p>
-          </div>
-          
-          <div class="info-section">
-            <h3>Links</h3>
-            <a href="https://github.com/GoForce-Games/The-Rituals-of-Bill-El-Tuerto" target="_blank" class="project-link">GitHub Repository</a>
-            <a href="https://goforce-games.itch.io/the-rituals-of-bill-el-tuerto" target="_blank" class="project-link">itch.io Page</a>
-          </div>
-          
-          <div class="info-section">
-            <h3>Key Features</h3>
-            <ul>
-              <li>Fully interactive VR environment with physics-based interactions</li>
-              <li>Complex puzzle system with multiple solutions</li>
-              <li>Atmospheric lighting and sound design</li>
-              <li>Optimized for Oculus Rift and HTC Vive</li>
-              <li>Dynamic event system for non-linear progression</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div> -->
 
         <!-- Oh My Ghost Project -->
         <div id="oh-my-ghost" class="project-details">
@@ -516,8 +424,7 @@
           <div class="project-content">
             <div class="project-media">
               <div class="media-tabs">
-                <button class="media-tab active" data-target="coffee-screenshots">Engine</button>
-                <!-- <button class="media-tab" data-target="coffee-videos">Videos</button> -->
+                <button class="media-tab active" data-target="coffee-screenshots" data-i18n="tab_engine">Engine</button>
               </div>
 
               <div id="coffee-screenshots" class="media-content active">
@@ -527,43 +434,34 @@
                   <img src="./images/projects/coffee-engine/video2.gif" alt="Coffee Engine Screenshot 2">
                 </div>
               </div>
-
-              <!-- <div id="coffee-videos" class="media-content">
-            <div class="video-container">
-              <video controls>
-                <source src="#" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
-            </div>
-          </div> -->
             </div>
 
             <div class="project-info">
               <div class="info-section">
-                <h3>Description</h3>
-                <p>Led the development of the UI Module for Coffee Engine, a high-level game engine designed for 3D
+                <h3 data-i18n="label_description">Description</h3>
+                <p data-i18n="coffee_desc">Led the development of the UI Module for Coffee Engine, a high-level game engine designed for 3D
                   projects. Created a flexible and intuitive user interface system that allowed game developers to
                   easily implement in-game menus, HUDs, and other UI elements.</p>
               </div>
 
               <div class="info-section">
-                <h3>My Role</h3>
+                <h3 data-i18n="label_my_role">My Role</h3>
                 <ul>
-                  <li>Designed the architecture for the UI module</li>
-                  <li>Implemented widget system for reusable UI components</li>
-                  <li>Created layout management tools for responsive interfaces</li>
-                  <li>Developed event handling for UI interactions</li>
-                  <li>Built a drag-and-drop editor for UI creation</li>
+                  <li data-i18n="coffee_role_1">Designed the architecture for the UI module</li>
+                  <li data-i18n="coffee_role_2">Implemented widget system for reusable UI components</li>
+                  <li data-i18n="coffee_role_3">Created layout management tools for responsive interfaces</li>
+                  <li data-i18n="coffee_role_4">Developed event handling for UI interactions</li>
+                  <li data-i18n="coffee_role_5">Built a drag-and-drop editor for UI creation</li>
                 </ul>
               </div>
 
               <div class="info-section">
-                <h3>Technologies Used</h3>
+                <h3 data-i18n="label_tech">Technologies Used</h3>
                 <p>C++, OpenGL, ImGui, JSON</p>
               </div>
 
               <div class="info-section">
-                <h3>Links</h3>
+                <h3 data-i18n="label_links">Links</h3>
                 <a href="https://github.com/Burned-Games/Coffee-Engine/tree/Alpha1" target="_blank"
                   class="project-link">GitHub Repository</a>
               </div>
@@ -579,8 +477,8 @@
           <div class="project-content">
             <div class="project-media">
               <div class="media-tabs">
-                <button class="media-tab active" data-target="bomberman-screenshots">Screenshots</button>
-                <button class="media-tab" data-target="bomberman-videos">Trailer</button>
+                <button class="media-tab active" data-target="bomberman-screenshots" data-i18n="tab_screenshots">Screenshots</button>
+                <button class="media-tab" data-target="bomberman-videos" data-i18n="tab_trailer">Trailer</button>
               </div>
 
               <div id="bomberman-screenshots" class="media-content active">
@@ -603,29 +501,29 @@
 
             <div class="project-info">
               <div class="info-section">
-                <h3>Description</h3>
-                <p>An adaptation of the NeoGeo classic Bomberman: Panic Bomber made in C++. This puzzle-action game
+                <h3 data-i18n="label_description">Description</h3>
+                <p data-i18n="bomberman_desc">An adaptation of the NeoGeo classic Bomberman: Panic Bomber made in C++. This puzzle-action game
                   combines elements of falling-block puzzlers with the explosive gameplay of Bomberman, creating a
                   fast-paced and competitive experience.</p>
               </div>
 
               <div class="info-section">
-                <h3>My Role</h3>
+                <h3 data-i18n="label_my_role">My Role</h3>
                 <ul>
-                  <li>Core gameplay mechanics implementation</li>
-                  <li>UI system: Points, Main menu, Loose Screen, Continue Screen, and more</li>
-                  <li>AI opponent programming</li>
-                  <li>Sound and visual effects integration</li>
+                  <li data-i18n="bomberman_role_1">Core gameplay mechanics implementation</li>
+                  <li data-i18n="bomberman_role_2">UI system: Points, Main menu, Loose Screen, Continue Screen, and more</li>
+                  <li data-i18n="bomberman_role_3">AI opponent programming</li>
+                  <li data-i18n="bomberman_role_4">Sound and visual effects integration</li>
                 </ul>
               </div>
 
               <div class="info-section">
-                <h3>Technologies Used</h3>
+                <h3 data-i18n="label_tech">Technologies Used</h3>
                 <p>C++, SDL2, Custom Rendering Engine</p>
               </div>
 
               <div class="info-section">
-                <h3>Links</h3>
+                <h3 data-i18n="label_links">Links</h3>
                 <a href="https://github.com/GoForce-Games/Projecte-1" target="_blank" class="project-link">GitHub
                   Repository</a>
               </div>
@@ -641,7 +539,7 @@
           <div class="project-content">
             <div class="project-media">
               <div class="media-tabs">
-                <button class="media-tab active" data-target="bald-screenshots">Gameplay</button>
+                <button class="media-tab active" data-target="bald-screenshots" data-i18n="tab_gameplay">Gameplay</button>
               </div>
 
               <div id="bald-screenshots" class="media-content active">
@@ -651,37 +549,35 @@
                   <img src="./images/projects/furious-bald/screenshot3.png" alt="Furious Bald Screenshot 3">
                 </div>
               </div>
-
-
             </div>
 
             <div class="project-info">
               <div class="info-section">
-                <h3>Description</h3>
-                <p>A 2D platformer game developed using SDL2 featuring a bald protagonist with a fiery temper navigating
+                <h3 data-i18n="label_description">Description</h3>
+                <p data-i18n="bald_desc">A 2D platformer game developed using SDL2 featuring a bald protagonist with a fiery temper navigating
                   through challenging levels. The game combines fast-paced action with precision platforming and unique
                   power-ups.</p>
               </div>
 
               <div class="info-section">
-                <h3>My Role</h3>
+                <h3 data-i18n="label_my_role">My Role</h3>
                 <ul>
-                  <li>Character controller implementation</li>
-                  <li>Collision detection and physics</li>
-                  <li>Enemy AI behavior patterns</li>
-                  <li>Power-up system development</li>
-                  <li>Level design for progressively challenging stages</li>
-                  <li>Animation state machine programming</li>
+                  <li data-i18n="bald_role_1">Character controller implementation</li>
+                  <li data-i18n="bald_role_2">Collision detection and physics</li>
+                  <li data-i18n="bald_role_3">Enemy AI behavior patterns</li>
+                  <li data-i18n="bald_role_4">Power-up system development</li>
+                  <li data-i18n="bald_role_5">Level design for progressively challenging stages</li>
+                  <li data-i18n="bald_role_6">Animation state machine programming</li>
                 </ul>
               </div>
 
               <div class="info-section">
-                <h3>Technologies Used</h3>
+                <h3 data-i18n="label_tech">Technologies Used</h3>
                 <p>C++, SDL2, Box2D, XML</p>
               </div>
 
               <div class="info-section">
-                <h3>Links</h3>
+                <h3 data-i18n="label_links">Links</h3>
                 <a href="https://github.com/ClaseAltaGames/FuriousBald" target="_blank" class="project-link">GitHub
                   Repository</a>
               </div>
@@ -697,8 +593,8 @@
           <div class="project-content">
             <div class="project-media">
               <div class="media-tabs">
-                <button class="media-tab active" data-target="arkanoid-screenshots">Gameplay</button>
-                <button class="media-tab" data-target="arkanoid-videos">Trailer</button>
+                <button class="media-tab active" data-target="arkanoid-screenshots" data-i18n="tab_gameplay">Gameplay</button>
+                <button class="media-tab" data-target="arkanoid-videos" data-i18n="tab_trailer">Trailer</button>
               </div>
 
               <div id="arkanoid-screenshots" class="media-content active">
@@ -721,217 +617,37 @@
 
             <div class="project-info">
               <div class="info-section">
-                <h3>Description</h3>
-                <p>A Unity mobile adaptation of the classic Arkanoid game, combining retro gameplay with modern mobile
+                <h3 data-i18n="label_description">Description</h3>
+                <p data-i18n="arkanoid_desc">A Unity mobile adaptation of the classic Arkanoid game, combining retro gameplay with modern mobile
                   features. Players control a paddle to bounce a ball and break blocks while collecting power-ups and
                   advancing through increasingly difficult levels.</p>
               </div>
 
               <div class="info-section">
-                <h3>My Role</h3>
+                <h3 data-i18n="label_my_role">My Role</h3>
                 <ul>
-                  <li>Mobile touch controls implementation</li>
-                  <li>Physics system for realistic ball bouncing</li>
-                  <li>Power-up system with various effects</li>
-                  <li>Level progression and difficulty scaling</li>
-                  <li>Visual effects for block destruction</li>
-                  <li>Mobile optimization for smooth performance</li>
+                  <li data-i18n="arkanoid_role_1">Mobile touch controls implementation</li>
+                  <li data-i18n="arkanoid_role_2">Physics system for realistic ball bouncing</li>
+                  <li data-i18n="arkanoid_role_3">Power-up system with various effects</li>
+                  <li data-i18n="arkanoid_role_4">Level progression and difficulty scaling</li>
+                  <li data-i18n="arkanoid_role_5">Visual effects for block destruction</li>
+                  <li data-i18n="arkanoid_role_6">Mobile optimization for smooth performance</li>
                 </ul>
               </div>
 
               <div class="info-section">
-                <h3>Technologies Used</h3>
+                <h3 data-i18n="label_tech">Technologies Used</h3>
                 <p>Unity, C#</p>
               </div>
 
               <div class="info-section">
-                <h3>Links</h3>
+                <h3 data-i18n="label_links">Links</h3>
                 <a href="https://github.com/CITM-MOBILE-DEVICES-TERRASSA/Arkanoid_PauMenaTorres" target="_blank"
                   class="project-link">GitHub Repository</a>
               </div>
             </div>
           </div>
         </div>
-
-
-
-        <!-- Rockstallica Engine Project -->
-        <!-- <div id="rockstallica" class="project-details">
-      <button class="close-project">✖</button>
-      <h2>Rockstallica Engine</h2>
-      
-      <div class="project-content">
-        <div class="project-media">
-          <div class="media-tabs">
-            <button class="media-tab active" data-target="rockstallica-screenshots">Screenshots</button>
-            <button class="media-tab" data-target="rockstallica-videos">Videos</button>
-          </div>
-          
-          <div id="rockstallica-screenshots" class="media-content active">
-            <div class="screenshot-gallery">
-              <img src="https://github.com/user-attachments/assets/placeholder-screenshot1.jpg" alt="Rockstallica Engine Screenshot 1">
-              <img src="https://github.com/user-attachments/assets/placeholder-screenshot2.jpg" alt="Rockstallica Engine Screenshot 2">
-            </div>
-          </div>
-          
-          <div id="rockstallica-videos" class="media-content">
-            <div class="video-container">
-              <video controls>
-                <source src="#" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
-            </div>
-          </div>
-        </div>
-        
-        <div class="project-info">
-          <div class="info-section">
-            <h3>Description</h3>
-            <p>A custom game engine developed for creating 3D projects, with a focus on performance and ease of use. Rockstallica Engine provides a comprehensive set of tools for game developers, including rendering, physics, audio, and scene management systems.</p>
-          </div>
-          
-          <div class="info-section">
-            <h3>My Role</h3>
-            <ul>
-              <li>Core engine architecture design</li>
-              <li>Renderer implementation with modern OpenGL</li>
-              <li>Scene graph and component system</li>
-              <li>Resource management system</li>
-              <li>Editor UI development</li>
-              <li>Performance optimization</li>
-            </ul>
-          </div>
-          
-          <div class="info-section">
-            <h3>Technologies Used</h3>
-            <p>C++, OpenGL, ImGui, Bullet Physics, OpenAL</p>
-          </div>
-          
-          <div class="info-section">
-            <h3>Links</h3>
-            <a href="https://github.com/ClaseAltaGames/RockstallicaEngine" target="_blank" class="project-link">GitHub Repository</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    !-- Pinball 2D Project 
-    <div id="pinball" class="project-details">
-      <button class="close-project">✖</button>
-      <h2>Pinball 2D</h2>
-      
-      <div class="project-content">
-        <div class="project-media">
-          <div class="media-tabs">
-            <button class="media-tab active" data-target="pinball-screenshots">Screenshots</button>
-            <button class="media-tab" data-target="pinball-videos">Videos</button>
-          </div>
-          
-          <div id="pinball-screenshots" class="media-content active">
-            <div class="screenshot-gallery">
-              <img src="https://github.com/user-attachments/assets/placeholder-screenshot1.jpg" alt="Pinball 2D Screenshot 1">
-              <img src="https://github.com/user-attachments/assets/placeholder-screenshot2.jpg" alt="Pinball 2D Screenshot 2">
-            </div>
-          </div>
-          
-          <div id="pinball-videos" class="media-content">
-            <div class="video-container">
-              <video controls>
-                <source src="#" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
-            </div>
-          </div>
-        </div>
-        
-        <div class="project-info">
-          <div class="info-section">
-            <h3>Description</h3>
-            <p>A physics-based pinball game developed in C++ that accurately simulates the mechanics of real-world pinball tables. Features realistic ball physics, interactive elements like bumpers and flippers, and a scoring system with multi-ball challenges.</p>
-          </div>
-          
-          <div class="info-section">
-            <h3>My Role</h3>
-            <ul>
-              <li>Physics simulation implementation</li>
-              <li>Flipper mechanics and controls</li>
-              <li>Collision detection and response</li>
-              <li>Table elements (bumpers, ramps, targets)</li>
-              <li>Scoring system and multipliers</li>
-              <li>Visual and audio feedback systems</li>
-            </ul>
-          </div>
-          
-          <div class="info-section">
-            <h3>Technologies Used</h3>
-            <p>C++, Box2D, SDL2, Custom Physics Engine</p>
-          </div>
-          
-          <div class="info-section">
-            <h3>Links</h3>
-            <a href="https://github.com/GoForce-Games/Fisica---Pinball" target="_blank" class="project-link">GitHub Repository</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    EscapeRoom VR Project
-    <div id="escaperoom" class="project-details">
-      <button class="close-project">✖</button>
-      <h2>EscapeRoom VR: The Rituals of Bill "El Tuerto"</h2>
-      
-      <div class="project-content">
-        <div class="project-media">
-          <div class="media-tabs">
-            <button class="media-tab active" data-target="escaperoom-screenshots">Screenshots</button>
-            <button class="media-tab" data-target="escaperoom-videos">Videos</button>
-          </div>
-          
-          <div id="escaperoom-screenshots" class="media-content active">
-            <div class="screenshot-gallery">
-              <img src="https://github.com/user-attachments/assets/placeholder-screenshot1.jpg" alt="EscapeRoom VR Screenshot 1">
-              <img src="https://github.com/user-attachments/assets/placeholder-screenshot2.jpg" alt="EscapeRoom VR Screenshot 2">
-            </div>
-          </div>
-          
-          <div id="escaperoom-videos" class="media-content">
-            <div class="video-container">
-              <video controls>
-                <source src="#" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
-            </div>
-          </div>
-        </div>
-        
-        <div class="project-info">
-          <div class="info-section">
-            <h3>Description</h3>
-            <p>An immersive virtual reality escape room thriller where players must solve intricate puzzles to uncover the dark secrets of Bill "El Tuerto" and escape before time runs out. The game combines atmospheric horror elements with challenging puzzle mechanics in a fully interactive VR environment.</p>
-          </div>
-          
-          <div class="info-section">
-            <h3>My Role</h3>
-            <ul>
-              <li>VR interaction system development</li>
-              <li>Puzzle design and implementation</li>
-              <li>Environmental storytelling elements</li>
-              <li>Physics-based object manipulation</li>
-              <li>Atmospheric lighting and sound design</li>
-              <li>Performance optimization for VR</li>
-            </ul>
-          </div>
-          
-          <div class="info-section">
-            <h3>Technologies Used</h3>
-            <p>Unity, C#, SteamVR, Oculus SDK</p>
-          </div>
-          
-          <div class="info-section">
-            <h3>Links</h3>
-            <a href="https://github.com/GoForce-Games/EscapeRoomVR" target="_blank" class="project-link">GitHub Repository</a>
-          </div>
-    </div>-->
 
         <!-- Revelant Terrassa Project -->
         <div id="revelant-terrassa" class="project-details">
@@ -950,13 +666,13 @@
 
             <div class="project-info">
               <div class="info-section">
-                <h3>Company</h3>
+                <h3 data-i18n="label_company">Company</h3>
                 <p><strong>Consorci Sanitari de Terrassa (CST) & Parc Audiovisual de Catalunya</strong></p>
               </div>
 
               <div class="info-section">
-                <h3>Description</h3>
-                <p><strong>Developed for Consorci Sanitari de Terrassa (CST) & Parc Audiovisual de Catalunya</strong>,
+                <h3 data-i18n="label_description">Description</h3>
+                <p data-i18n="revelant_desc">Developed for Consorci Sanitari de Terrassa (CST) & Parc Audiovisual de Catalunya,
                   this is a virtual reality (VR)
                   reminiscence therapy experience designed for elderly care. The project transports users to the
                   1960s–70s in Terrassa, recreating the iconic square "Plaça Vella" with high fidelity using
@@ -964,31 +680,30 @@
               </div>
 
               <div class="info-section">
-                <h3>My Role (Lead Programmer)</h3>
+                <h3 data-i18n="label_my_role_lead">My Role (Lead Programmer)</h3>
                 <ul>
-                  <li>Programmed the core interaction framework and interactive narrative systems in Unity (C#).</li>
-                  <li>Developed the onboarding phase, including an interactive hand-tracking tutorial that naturally
+                  <li data-i18n="revelant_role_1">Programmed the core interaction framework and interactive narrative systems in Unity (C#).</li>
+                  <li data-i18n="revelant_role_2">Developed the onboarding phase, including an interactive hand-tracking tutorial that naturally
                     introduces VR controls to elderly users.</li>
-                  <li>Integrated advanced VR Hand Tracking mechanics using the Meta XR SDK and XR Interaction Toolkit.
-                  </li>
-                  <li>Implemented urban exploration puzzles of progressive difficulty to ensure accessibility and
+                  <li data-i18n="revelant_role_3">Integrated advanced VR Hand Tracking mechanics using the Meta XR SDK and XR Interaction Toolkit.</li>
+                  <li data-i18n="revelant_role_4">Implemented urban exploration puzzles of progressive difficulty to ensure accessibility and
                     cognitive engagement.</li>
-                  <li>Collaborated on environmental details, including historical vehicles (Seat 600, Pegaso trucks),
+                  <li data-i18n="revelant_role_5">Collaborated on environmental details, including historical vehicles (Seat 600, Pegaso trucks),
                     classic motorcycles, period-accurate NPCs, and the iconic local traffic officer "El Policia Pota de
                     Pal".</li>
-                  <li>Created an immersive spatial audio experience with period-appropriate radio broadcasts, football
+                  <li data-i18n="revelant_role_6">Created an immersive spatial audio experience with period-appropriate radio broadcasts, football
                     matches, and classic advertisements.</li>
                 </ul>
               </div>
 
               <div class="info-section">
-                <h3>Technologies Used</h3>
+                <h3 data-i18n="label_tech">Technologies Used</h3>
                 <p>Unity, C#, Meta Quest (Meta XR SDK), Hand Tracking (XR Interaction Toolkit), Photogrammetry, Spatial
                   Audio</p>
               </div>
 
               <div class="info-section">
-                <h3>Links</h3>
+                <h3 data-i18n="label_links">Links</h3>
                 <a href="https://github.com/PAE-CITM/RevelantTerrassa" target="_blank" class="project-link">GitHub
                   Repository</a>
               </div>
@@ -1015,13 +730,13 @@
 
             <div class="project-info">
               <div class="info-section">
-                <h3>Company</h3>
+                <h3 data-i18n="label_company">Company</h3>
                 <p><strong>Lotify</strong></p>
               </div>
 
               <div class="info-section">
-                <h3>Description</h3>
-                <p><strong>Developed for Lotify</strong>, this is a hybrid physical + digital party game that blends a
+                <h3 data-i18n="label_description">Description</h3>
+                <p data-i18n="sobremesa_desc">Developed for Lotify, this is a hybrid physical + digital party game that blends a
                   physical board game (tablero) with a mobile companion app. Built using Godot 4.3, the digital
                   companion manages the game flow, offering interactive menus, dice rolling, roulette mechanics,
                   scoreboards, and 9 diverse mini-game modes. The game supports 2 to 4 teams and features dynamic board
@@ -1029,50 +744,35 @@
               </div>
 
               <div class="info-section">
-                <h3>Key Features & Mechanics</h3>
+                <h3 data-i18n="label_mechanics">Key Features & Mechanics</h3>
                 <ul>
-                  <li><strong>Teams:</strong> Tailored for 2 to 4 teams playing simultaneously with custom names.</li>
-                  <li><strong>Dynamic Difficulty:</strong> Scales dynamically based on each team's score and performance
-                    streak.</li>
-                  <li><strong>4 Mini-game Categories:</strong>
-                    <ul>
-                      <li><strong>Show:</strong> Humming (Tararear), Mimicry (Mímica), and Drawing (Dibujar/Gestures).
-                      </li>
-                      <li><strong>Wit (Ingenio):</strong> Logic, 3-Word challenges, Yes/No questions, Banned Words, and
-                        Forbidden Letters.</li>
-                      <li><strong>Know-It-All (Sabelotodo):</strong> Trivia quizzes, Primary School questions, Roulette
-                        challenges, and Pasapalabra.</li>
-                      <li><strong>Mentalist:</strong> Telepathy challenges, including matching or mismatching answers.
-                      </li>
-                    </ul>
-                  </li>
-                  <li><strong>Decision Squares:</strong> Special tiles allow teams to decide their own challenge or
-                    choose a challenge for their rivals.</li>
-                  <li><strong>Final Sequence:</strong> Reaching the final square triggers a climax where teams must
-                    overcome 3 consecutive mini-game challenges in a row to win.</li>
-                  <li><strong>All or Nothing (Todo o Nada):</strong> A final showdown mechanism that resolves ties or
-                    deadlocks when teams get stuck.</li>
+                  <li data-i18n="sobremesa_mech_1"><strong>Teams:</strong> Tailored for 2 to 4 teams playing simultaneously with custom names.</li>
+                  <li data-i18n="sobremesa_mech_2"><strong>Dynamic Difficulty:</strong> Scales dynamically based on each team's score and performance streak.</li>
+                  <li data-i18n="sobremesa_mech_3"><strong>4 Mini-game Categories:</strong> Show (Humming, Mimicry, Drawing), Wit, Know-It-All, and Mentalist.</li>
+                  <li data-i18n="sobremesa_mech_4"><strong>Decision Squares:</strong> Special tiles allow teams to decide their own challenge or choose a challenge for their rivals.</li>
+                  <li data-i18n="sobremesa_mech_5"><strong>Final Sequence:</strong> Reaching the final square triggers a climax where teams must overcome 3 consecutive mini-game challenges in a row to win.</li>
+                  <li data-i18n="sobremesa_mech_6"><strong>All or Nothing (Todo o Nada):</strong> A final showdown mechanism that resolves ties or deadlocks when teams get stuck.</li>
                 </ul>
               </div>
 
               <div class="info-section">
-                <h3>My Role</h3>
+                <h3 data-i18n="label_my_role">My Role</h3>
                 <ul>
-                  <li>Programmed the core game loop, turn management, and state machine in GDScript.</li>
-                  <li>Implemented the dynamic difficulty scaling and team performance streak tracking algorithms.</li>
-                  <li>Coded the final sequence logic, enabling dynamic challenge cycling across categories.</li>
-                  <li>Developed UI menus, mini-games, and custom audio integration for timers, dice rolls, and victory
+                  <li data-i18n="sobremesa_role_1">Programmed the core game loop, turn management, and state machine in GDScript.</li>
+                  <li data-i18n="sobremesa_role_2">Implemented the dynamic difficulty scaling and team performance streak tracking algorithms.</li>
+                  <li data-i18n="sobremesa_role_3">Coded the final sequence logic, enabling dynamic challenge cycling across categories.</li>
+                  <li data-i18n="sobremesa_role_4">Developed UI menus, mini-games, and custom audio integration for timers, dice rolls, and victory
                     events.</li>
                 </ul>
               </div>
 
               <div class="info-section">
-                <h3>Technologies Used</h3>
+                <h3 data-i18n="label_tech">Technologies Used</h3>
                 <p>Godot 4.3, GDScript, JSON Data Parsers, Mobile UX Design</p>
               </div>
 
               <div class="info-section">
-                <h3>Links</h3>
+                <h3 data-i18n="label_links">Links</h3>
                 <a href="https://github.com/PauMenaTorres/LaSobremesa" target="_blank" class="project-link">GitHub
                   Repository</a>
               </div>
@@ -1109,6 +809,11 @@
             targetProject.classList.add('active');
             projectDetailsContainer.classList.add('active');
             document.body.classList.add('project-open');
+
+            // Force translation refresh on newly opened modal
+            if (typeof setLanguage === 'function' && window.currentLang) {
+              setLanguage(window.currentLang);
+            }
 
             // Autoplay video in the active content of the opened project if present
             const activeContent = targetProject.querySelector('.media-content.active');
@@ -1198,25 +903,27 @@
 
 
     <section id="contact-section" class="section contact">
-      <h2><span>🫱🏻‍🫲🏻</span> Connect with Me <span>🫱🏻‍🫲🏻</span></h2>
+      <h2><span>🫱🏻‍🫲🏻</span> <span data-i18n="contact_title">Connect with Me</span> <span>🫱🏻‍🫲🏻</span></h2>
       <div class="contact-details">
-        <p>📞 Phone: +34 619886534</p>
-        <p>✉️ Email: paumt128@gmail.com </p>
+        <p><span data-i18n="contact_phone">📞 Phone:</span> +34 619886534</p>
+        <p><span data-i18n="contact_email">✉️ Email:</span> paumt128@gmail.com</p>
       </div>
       <div class="social-links">
         <div class="social-links">
           <a href="https://www.linkedin.com/in/pau-mena-torres-a884232a0" target="_blank"
             rel="noopener noreferrer">LinkedIn</a>
           <a href="https://www.artstation.com/paumt128" target="_blank" rel="noopener noreferrer">ArtStation</a>
-          <a href="mailto:paumt128@gmail.com" target="_blank" class="email-link">Email me</a>
+          <a href="mailto:paumt128@gmail.com" target="_blank" class="email-link" data-i18n="contact_email_btn">Email me</a>
         </div>
       </div>
     </section>
   </main>
 
   <footer>
-    <p>© 2026 Pau Mena Torres</p>
+    <p data-i18n="footer_text">© 2026 Pau Mena Torres</p>
   </footer>
+
+  <script src="i18n.js"></script>
 </body>
 
 </html>

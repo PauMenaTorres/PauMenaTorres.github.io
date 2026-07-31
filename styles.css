@@ -16,7 +16,7 @@ body {
 /* ===== NAVEGACIÓN ===== */
 .navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     position: fixed;
     top: 0;
@@ -67,6 +67,48 @@ body {
 
 .menu-toggle:hover {
     transform: scale(1.1);
+}
+
+/* ===== SELECTOR DE IDIOMAS ===== */
+.lang-selector {
+    position: absolute;
+    right: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    gap: 0.3rem;
+    background: rgba(26, 26, 46, 0.9);
+    padding: 0.3rem 0.5rem;
+    border-radius: 20px;
+    border: 1.5px solid var(--neon-color);
+    backdrop-filter: blur(6px);
+    box-shadow: 0 0 10px rgba(155, 89, 182, 0.4);
+    z-index: 1002;
+    align-items: center;
+}
+
+.lang-btn {
+    background: transparent;
+    color: #b0b0b0;
+    border: none;
+    padding: 0.35rem 0.65rem;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.6rem;
+    cursor: pointer;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+.lang-btn:hover {
+    color: #fff;
+    background: rgba(155, 89, 182, 0.3);
+}
+
+.lang-btn.active {
+    background: var(--neon-color);
+    color: #ffffff;
+    box-shadow: 0 0 10px var(--neon-color);
 }
 
 /* ===== HEADER ===== */
@@ -884,6 +926,14 @@ h2 span {
 
     .navbar {
         flex-wrap: wrap;
+    }
+
+    .lang-selector {
+        position: relative;
+        right: auto;
+        top: auto;
+        transform: none;
+        margin-left: auto;
     }
 
     .navbar ul {
