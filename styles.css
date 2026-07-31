@@ -484,6 +484,76 @@ body.project-open {
     animation: float 3s ease-in-out infinite, smoothFade 2s;
 }
 
+/* ===== EDUCACIÓN / EDUCATION ===== */
+.education-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+.education-card {
+    background: rgba(42, 42, 63, 0.7);
+    border: 2px solid var(--neon-color);
+    border-radius: 12px;
+    padding: 2rem;
+    max-width: 800px;
+    width: 100%;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4), 0 0 15px rgba(155, 89, 182, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: smoothFade 1.2s ease-in-out;
+}
+
+.education-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(155, 89, 182, 0.5), 0 0 25px rgba(155, 89, 182, 0.4);
+}
+
+.education-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 1.5px dashed rgba(155, 89, 182, 0.4);
+    padding-bottom: 0.8rem;
+}
+
+.education-header h3 {
+    margin: 0;
+    font-size: 1rem;
+    color: #fff;
+    line-height: 1.4;
+}
+
+.education-badge {
+    background: linear-gradient(135deg, #00f2fe, #0077b6);
+    color: #ffffff;
+    font-size: 0.65rem;
+    font-weight: bold;
+    padding: 0.4rem 0.9rem;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 242, 254, 0.4);
+    letter-spacing: 0.5px;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.education-card h4 {
+    color: #a6a6d6;
+    font-size: 0.85rem;
+    margin: 0.5rem 0 1rem 0;
+    line-height: 1.5;
+}
+
+.education-details {
+    color: #e0e0e0;
+    font-size: 0.75rem;
+    line-height: 1.8;
+    margin: 0;
+}
+
 /* ===== HABILIDADES ===== */
 #skills {
     text-align: center;
