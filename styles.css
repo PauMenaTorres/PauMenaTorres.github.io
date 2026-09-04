@@ -796,19 +796,21 @@ h2 span {
 }
 
 .featured-projects-list {
-    display: flex;
-    justify-content: center;
-    max-width: 900px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 2rem;
+    max-width: 1150px;
     margin: 0 auto 3.5rem auto;
+    justify-items: center;
+    width: 100%;
 }
 
 .project-card.featured-card {
     width: 100%;
-    max-width: 850px;
+    max-width: 540px;
     height: 340px;
     border: 3px solid #00f2fe;
     box-shadow: 0 0 25px rgba(0, 242, 254, 0.4), 0 10px 30px rgba(0, 0, 0, 0.7);
-    background-image: url('./images/projects/modular-ui/LogoConNombre.png'), linear-gradient(135deg, #0b1120, #0f172a) !important;
     background-size: cover !important;
     background-position: center !important;
     background-repeat: no-repeat !important;
@@ -834,6 +836,11 @@ h2 span {
     z-index: 3;
     letter-spacing: 0.5px;
     animation: pulse 2.5s infinite;
+}
+
+.featured-badge.team-badge {
+    background: linear-gradient(135deg, #ff416c, #ff4b2b);
+    box-shadow: 0 4px 14px rgba(255, 65, 108, 0.6);
 }
 
 .featured-title-container {

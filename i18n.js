@@ -30,12 +30,17 @@ const translations = {
     projects_title: "Projects",
     projects_company: "Company Projects",
     projects_personal: "Personal && Group Projects",
-    projects_featured: "Featured Project",
+    projects_featured: "Featured Projects",
 
     // Featured Modular UI
     modular_badge: "🚀 Published on Unity Asset Store",
     modular_subtitle: "Cross-Platform UI Architecture Framework (Open-Source)",
     modular_btn: "View Case Study & Overview →",
+
+    // Featured W40K
+    w40k_badge: "👥 40-Person Team Project",
+    w40k_subtitle: "HUD & UI Gameplay System in Custom C++ Engine (40-Developer Team)",
+    w40k_btn: "View Overview →",
 
     // Modal Shared Labels
     label_status: "Status & Availability",
@@ -53,6 +58,7 @@ const translations = {
 
     // Media Tabs
     tab_trailer: "🎬 Trailer Video",
+    tab_full_experience: "🎬 Full Experience",
     tab_screenshots: "🖼️ Screenshots",
     tab_gameplay: "Gameplay",
     tab_engine: "Engine",
@@ -93,6 +99,19 @@ const translations = {
     coffee_role_3: "Created layout management tools for responsive interfaces",
     coffee_role_4: "Developed event handling for UI interactions",
     coffee_role_5: "Built a drag-and-drop editor for UI creation",
+
+    // Bill El Tuerto
+    bill_desc: "<strong>'The Rituals of Bill ‘El Tuerto’'</strong> is an immersive virtual reality escape room thriller that plunges players into a dark investigation to unravel the mystery of a sadistic serial killer. Years after the notorious Bill 'One-Eye' Gatess terrorized the city, a determined police officer breaks into the killer's apartment in a desperate quest for answers. But the deeper he digs, the more reality blurs...",
+    bill_role_1: "Co-led overall game design, spatial storytelling, and room progression mechanics across all 4 puzzle rooms.",
+    bill_role_2: "Programmed state-driven puzzle logic using C# ScriptableObjects and event listeners for modular scene execution.",
+    bill_role_3: "Developed VR comfort interaction modes (seated/standing) and smooth locomotion / teleportation toggles.",
+    bill_role_4: "Implemented custom time management system enforcing the 30-minute fail state and checkpoint loader for QA.",
+    bill_feat_1: "<strong>Cryptic Puzzle Solving 🔍:</strong> Solve multi-layered puzzles and decode cryptic messages in VR.",
+    bill_feat_2: "<strong>Environmental Storytelling 📺:</strong> Interactive environmental narrative through VHS tapes, physical object manipulation, and audio logs.",
+    bill_feat_3: "<strong>Psychological Horror 🎭:</strong> Unique narrative with shocking twists, surreal events, and dual outcomes (True Ending vs 30-Minute Fail State).",
+    bill_feat_4: "<strong>Accessibility & Comfort 🎮:</strong> Seated and standing VR comfort modes with full accessibility input mapping.",
+    bill_feat_5: "<strong>Immersive VR Audio & Haptics 🔊:</strong> Haptic feedback and spatial audio engineered for Meta Quest 3 via OpenXR Toolkit.",
+    bill_feat_6: "<strong>Beat the Clock ⏱️:</strong> Custom 30-minute time management system enforcing tense survival gameplay.",
 
     // Bomberman
     bomberman_desc: "An adaptation of the NeoGeo classic Bomberman: Panic Bomber made in C++. This puzzle-action game combines elements of falling-block puzzlers with the explosive gameplay of Bomberman, creating a fast-paced and competitive experience.",
@@ -182,12 +201,17 @@ const translations = {
     projects_title: "Proyectos",
     projects_company: "Proyectos de Empresa",
     projects_personal: "Proyectos Personales y en Grupo",
-    projects_featured: "Proyecto Destacado",
+    projects_featured: "Proyectos Destacados",
 
     // Modular UI Destacado
     modular_badge: "🚀 Publicado en Unity Asset Store",
     modular_subtitle: "Framework de Arquitectura de UI Multiplataforma (Código Abierto)",
-    modular_btn: "Ver Estudio de Caso y Resumen →",
+    modular_btn: "Ver Caso de Estudio y Resumen →",
+
+    // W40K Destacado
+    w40k_badge: "👥 Proyecto en Equipo de 40 Personas",
+    w40k_subtitle: "Sistema de HUD y UI Gameplay en Motor Propio C++ (Equipo de 40 Personas)",
+    w40k_btn: "Ver Resumen →",
 
     // Etiquetas Comunes en Modales
     label_status: "Estado y Disponibilidad",
@@ -205,6 +229,7 @@ const translations = {
 
     // Pestañas Multimedia
     tab_trailer: "🎬 Vídeo Tráiler",
+    tab_full_experience: "🎬 Full Experience",
     tab_screenshots: "🖼️ Capturas de pantalla",
     tab_gameplay: "Jugabilidad",
     tab_engine: "Motor",
@@ -245,6 +270,19 @@ const translations = {
     coffee_role_3: "Creé herramientas de gestión de diseño para interfaces adaptativas",
     coffee_role_4: "Desarrollé la gestión de eventos para interacciones de UI",
     coffee_role_5: "Construí un editor de arrastrar y soltar (drag & drop) para creación de UI",
+
+    // Bill El Tuerto
+    bill_desc: "<strong>'The Rituals of Bill ‘El Tuerto’'</strong> es un thriller de realidad virtual tipo escape room de terror psicológico que sumerge a los jugadores en una oscura investigación para desentrañar el misterio de un sádico asesino en serie. Años después de que el infame Bill 'El Tuerto' Gatess aterrorizara la ciudad, un policía determinado se cuela en el apartamento del asesino en busca de respuestas. Pero cuanto más profundiza, más se desdibuja la realidad...",
+    bill_role_1: "Co-lideré el diseño general del juego, la narrativa espacial y las mecánicas de progresión a través de las 4 salas de puzles.",
+    bill_role_2: "Programé la lógica de puzles guiada por estados mediante ScriptableObjects en C# y eventos para una ejecución modular.",
+    bill_role_3: "Desarrollé modos de confort e interacción en VR (sentado/de pie) y conmutadores entre locomoción fluida y teletransporte.",
+    bill_role_4: "Implementé el sistema de gestión de tiempo personalizado para el límite de 30 minutos y el cargador de checkpoints para QA.",
+    bill_feat_1: "<strong>Resolución de Puzles 🔍:</strong> Resuelve puzles multicapa y descifra mensajes crípticos en Realidad Virtual.",
+    bill_feat_2: "<strong>Narrativa Ambiental 📺:</strong> Historia interactiva a través de cintas VHS, objetos del entorno y registros de audio.",
+    bill_feat_3: "<strong>Terror Psicológico 🎭:</strong> Experiencia única con giros sorprendentes, eventos surrealistas y finales duales (Final Verdadero vs Estado de Fallo a los 30 min).",
+    bill_feat_4: "<strong>Confort y Accesibilidad 🎮:</strong> Modos de juego sentado y de pie intercambiables en cualquier momento.",
+    bill_feat_5: "<strong>Audio Espacial y Háptica 🔊:</strong> Experiencia VR inmersiva optimizada para Meta Quest 3 con OpenXR.",
+    bill_feat_6: "<strong>Contra el Reloj ⏱️:</strong> Sobrevive en menos de 30 minutos o sufre las consecuencias...",
 
     // Bomberman
     bomberman_desc: "Adaptación en C++ del clásico de NeoGeo Bomberman: Panic Bomber. Combina elementos de puzle de bloques que caen con la jugabilidad explosiva de Bomberman en una experiencia competitiva y rápida.",
@@ -334,12 +372,17 @@ const translations = {
     projects_title: "Projectes",
     projects_company: "Projectes d'Empresa",
     projects_personal: "Projectes Personals i en Grup",
-    projects_featured: "Projecte Destacat",
+    projects_featured: "Projectes Destacats",
 
     // Modular UI Destacat
     modular_badge: "🚀 Publicat a Unity Asset Store",
     modular_subtitle: "Framework d'Arquitectura de UI Multiplataforma (Codi Obert)",
-    modular_btn: "Veure Estudi de Cas i Resum →",
+    modular_btn: "Veure Cas d'Estudi i Resum →",
+
+    // W40K Destacat
+    w40k_badge: "👥 Projecte en Equip de 40 Persones",
+    w40k_subtitle: "Sistema de HUD i UI Gameplay en Motor Propi C++ (Equip de 40 Persones)",
+    w40k_btn: "Veure Resum →",
 
     // Etiquetes Comuns a Modals
     label_status: "Estat i Disponibilitat",
@@ -357,6 +400,7 @@ const translations = {
 
     // Pestanyes Multimèdia
     tab_trailer: "🎬 Vídeo Tràiler",
+    tab_full_experience: "🎬 Experiència Completa",
     tab_screenshots: "🖼️ Captures de pantalla",
     tab_gameplay: "Jugabilitat",
     tab_engine: "Motor",
@@ -397,6 +441,19 @@ const translations = {
     coffee_role_3: "Vaig crear eines de gestió de disseny per a interfícies adaptatives",
     coffee_role_4: "Vaig desenvolupar la gestió d'esdeveniments per a interaccions de UI",
     coffee_role_5: "Vaig construir un editor d'arrossegar i anclar (drag & drop) per a creació de UI",
+
+    // Bill El Tuerto
+    bill_desc: "<strong>'The Rituals of Bill ‘El Tuerto’'</strong> és un thriller de realitat virtual tipus escape room de terror psicològic que submergeix els jugadors en una fosca investigació per desentranyar el misteri d'un sàdic assassí en sèrie. Anys després que l'infam Bill 'El Tuerto' Gatess aterroritzés la ciutat, un policia determinat s'infiltra a l'apartament de l'assassí a la cerca de respostes. Però quant més aprofundeix, més es desdibuixa la realitat...",
+    bill_role_1: "Co-vaig liderar el disseny general del joc, la narrativa espacial i les mecàniques de progressió a través de les 4 sales de trencaclosques.",
+    bill_role_2: "Vaig programar la lògica de trencaclosques basada en estats mitjançant ScriptableObjects en C# i esdeveniments per a una execució modular.",
+    bill_role_3: "Vaig desenvolupar modes de confort i interacció en VR (assegut/dempeus) i commutadors entre locomoció fluida i teletransport.",
+    bill_role_4: "Vaig implementar el sistema de gestió de temps personalitzat per al límit de 30 minuts i el carregador de punts de control per a QA.",
+    bill_feat_1: "<strong>Resolució de Trencaclosques 🔍:</strong> Resol trencaclosques de múltiples capes i desxifra missatges críptics en Realitat Virtual.",
+    bill_feat_2: "<strong>Narrativa Ambiental 📺:</strong> Història interactiva a través de cintes VHS, manipulació d'objectes i registres d'àudio.",
+    bill_feat_3: "<strong>Terror Psicològic 🎭:</strong> Experiència única amb girs sorprenents, esdeveniments surrealistes i finals duals (Final Verdader vs Estat de Fallada als 30 min).",
+    bill_feat_4: "<strong>Modes de Confort VR 🎮:</strong> Modes de joc assegut i dempeus intercanviables en qualsevol moment.",
+    bill_feat_5: "<strong>Àudio Espacial i Hàptica 🔊:</strong> Experiència VR immersiva optimitzada per a Meta Quest 3 amb OpenXR.",
+    bill_feat_6: "<strong>Contra el Rellotge ⏱️:</strong> Sobreviu en menys de 30 minuts o pateix les conseqüències...",
 
     // Bomberman
     bomberman_desc: "Adaptació en C++ del clàssic de NeoGeo Bomberman: Panic Bomber. Combina elements de trencaclosques de blocs que cauen amb la jugabilitat explosiva de Bomberman en una experiència competitiva i ràpida.",
