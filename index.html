@@ -54,7 +54,7 @@
     <section id="education-section" class="section education">
       <h2><span>🎓</span> <span data-i18n="edu_title">Education</span> <span>🎓</span></h2>
       <div class="education-container">
-        <div class="education-card">
+        <div class="education-card primary-card">
           <div class="education-header">
             <h3 data-i18n="edu_degree">Bachelor's Degree in Video Game Design & Development</h3>
             <span class="education-badge" data-i18n="edu_badge">Graduated</span>
@@ -66,6 +66,24 @@
             Developed an Open-Source Cross-Platform UI Framework for Unity as Bachelor's Thesis (TFG).
           </p>
         </div>
+
+        <div class="education-card cert-card-subtle">
+          <div class="education-header">
+            <h3 data-i18n="cert_js_title">JavaScript Moderno: Guía para dominar el lenguaje</h3>
+            <span class="education-badge cert-badge" data-i18n="cert_js_badge">Certificate</span>
+          </div>
+          <h4>Udemy — Fernando Herrera ({d/t} DevTalles)</h4>
+          <p class="education-details" data-i18n="cert_js_details">
+            Completed 21 hours of intensive modern JavaScript (ES6+), object-oriented programming, asynchronous JS
+            (Promises & Async/Await), DOM manipulation, design patterns, Webpack, Vite, and clean code practices.
+          </p>
+          <div class="education-actions">
+            <button class="cert-view-btn" onclick="openCertModal()" data-i18n="cert_js_view_btn">📜 View
+              Certificate</button>
+            <a href="https://ude.my/UC-27a423ac-2310-48a5-8384-6cccebaac2e9" target="_blank" rel="noopener noreferrer"
+              class="cert-link-btn" data-i18n="cert_js_verify_btn">🔗 Verify Credentials</a>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -75,7 +93,7 @@
 
       <div class="skills-list">
         <h3 data-i18n="skills_lang">Programming Languages:</h3>
-        <p>C# | C++ | Python | C | Lua</p>
+        <p>C# | C++ | Python | C | JavaScript | Lua</p>
 
         <h3 data-i18n="skills_3d">3D Modeling Software:</h3>
         <p>Maya | ZBrush | Substance</p>
@@ -1060,6 +1078,30 @@
           });
         });
       });
+
+      // Certificate Modal Logic
+      function openCertModal() {
+        const modal = document.getElementById('cert-modal');
+        if (modal) {
+          modal.classList.add('active');
+          document.body.classList.add('project-open');
+        }
+      }
+
+      function closeCertModal() {
+        const modal = document.getElementById('cert-modal');
+        if (modal) {
+          modal.classList.remove('active');
+          document.body.classList.remove('project-open');
+        }
+      }
+
+      document.addEventListener('click', function (e) {
+        const certModal = document.getElementById('cert-modal');
+        if (e.target === certModal) {
+          closeCertModal();
+        }
+      });
     </script>
 
 
@@ -1084,6 +1126,21 @@
   <footer>
     <p data-i18n="footer_text">© 2026 Pau Mena Torres</p>
   </footer>
+
+  <!-- Certificate Modal -->
+  <div id="cert-modal" class="cert-modal-overlay">
+    <div class="cert-modal-content">
+      <button class="close-cert-modal" onclick="closeCertModal()">&times;</button>
+      <h3 data-i18n="cert_js_title">JavaScript Moderno: Guía para dominar el lenguaje</h3>
+      <div class="cert-img-wrapper">
+        <img src="./images/certificates/certificateJavascript.jpg" alt="JavaScript Certificate - Pau Mena Torres">
+      </div>
+      <div class="cert-modal-footer">
+        <a href="https://ude.my/UC-27a423ac-2310-48a5-8384-6cccebaac2e9" target="_blank" rel="noopener noreferrer"
+          class="cert-link-btn" data-i18n="cert_js_verify_btn">🔗 Verify Credentials</a>
+      </div>
+    </div>
+  </div>
 
   <script src="i18n.js"></script>
 </body>

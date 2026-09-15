@@ -19,6 +19,11 @@ const translations = {
     edu_degree: "Bachelor's Degree in Video Game Design & Development",
     edu_badge: "Graduated",
     edu_details: "Specialized in Game Software Engineering, Engine & Graphics Programming, C++, Unity, VR Development, and UI Architecture. Developed an Open-Source Cross-Platform UI Framework for Unity as Bachelor's Thesis (TFG).",
+    cert_js_title: "Modern JavaScript: Guide to Mastering the Language",
+    cert_js_badge: "Certificate",
+    cert_js_details: "Completed 21 hours of intensive modern JavaScript (ES6+), object-oriented programming, asynchronous JS (Promises & Async/Await), DOM manipulation, design patterns, Webpack, Vite, and clean code practices.",
+    cert_js_view_btn: "📜 View Certificate",
+    cert_js_verify_btn: "🔗 Verify Credentials",
 
     // Skills
     skills_title: "Skills",
@@ -190,6 +195,11 @@ const translations = {
     edu_degree: "Grado en Diseño y Desarrollo de Videojuegos",
     edu_badge: "Graduado",
     edu_details: "Especializado en Ingeniería de Software de Videojuegos, Programación de Motores y Gráficos, C++, Unity, Desarrollo VR y Arquitectura de UI. Desarrollé un Framework de UI Multiplataforma de Código Abierto para Unity como Trabajo de Fin de Grado (TFG).",
+    cert_js_title: "JavaScript Moderno: Guía para dominar el lenguaje",
+    cert_js_badge: "Certificado",
+    cert_js_details: "Curso intensivo de 21 horas de JavaScript Moderno (ES6+), programación orientada a objetos, JS asíncrono (Promesas y Async/Await), manipulación del DOM, patrones de diseño, Webpack, Vite y buenas prácticas de código limpio.",
+    cert_js_view_btn: "📜 Ver Certificado",
+    cert_js_verify_btn: "🔗 Verificar Credenciales",
 
     // Habilidades
     skills_title: "Habilidades",
@@ -361,6 +371,11 @@ const translations = {
     edu_degree: "Grau en Disseny i Desenvolupament de Videojocs",
     edu_badge: "Graduat",
     edu_details: "Especialitzat en Enginyeria de Software de Videojocs, Programació de Motors i Gràfics, C++, Unity, Desenvolupament VR i Arquitectura de UI. Vaig desenvolupar un Framework de UI Multiplataforma de Codi Obert per a Unity com a Treball de Final de Grau (TFG).",
+    cert_js_title: "JavaScript Modern: Guia per dominar el llenguatge",
+    cert_js_badge: "Certificat",
+    cert_js_details: "Curs intensiu de 21 hores de JavaScript Modern (ES6+), programació orientada a objectes, JS asíncron (Promeses i Async/Await), manipulació del DOM, patrons de disseny, Webpack, Vite i bones pràctiques de codi net.",
+    cert_js_view_btn: "📜 Veure Certificat",
+    cert_js_verify_btn: "🔗 Verificar Credencials",
 
     // Habilitats
     skills_title: "Habilitats",
